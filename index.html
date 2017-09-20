@@ -28,6 +28,11 @@
 <body style="color:#00ff00">
   <script>
   function siteLoad() {
+    var isChrome = !!window.chrome
+    if(isChrome)
+    {
+      alert("This bit doesn't work on chrome! Firefox is better anyway.");
+    }
   //  alert("one");
     var rawFile = new XMLHttpRequest();
     //alert("two");
