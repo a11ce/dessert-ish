@@ -10,34 +10,47 @@
   div {
     box-shadow: 0 0 0px black inset;
   }
-
   #contentBox {
     margin: 0 auto;
     width: 70%;
   }
-
   #contentBox .column {
     float: left;
     margin: 0;
     width: 33%;
   }
-
-
   </style>
 </head>
 <body style="color:#00ff00">
   <script>
   function siteLoad() {
-          window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-
-    setInterval(function(){ window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ"); }, 3000);
+  //  alert("one");
+    var rawFile = new XMLHttpRequest();
+    //alert("two");
+    rawFile.open("GET", "files/sites.txt", false);
+  //alert("three");
+    rawFile.onreadystatechange = function ()
+    {
+      if(rawFile.readyState === 4)
+      {
+        if(rawFile.status === 200 || rawFile.status == 0)
+        {
+          var allText = rawFile.responseText;
+          //  alert(allText);
+          var allList = allText.split("\n");
+          //  alert(allList);
+          var arrayLength = allList.length;
+          for (var i = 0; i < arrayLength; i++) {
+            setTimeout(function() {
+              window.open(allList[i]);
+            }, 1000);
             //Do something
-          
+          }
         }
-
-
-
-
+      }
+    }
+    rawFile.send(null);
+  }
   </script>
   <audio
   src="files/park.mp3"
