@@ -28,36 +28,13 @@
 <body style="color:#00ff00">
   <script>
   function siteLoad() {
-  //  alert("one");
-    var rawFile = new XMLHttpRequest();
-    //alert("two");
-    rawFile.open("GET", "files/sites.txt", false);
-  //alert("three");
-    rawFile.onreadystatechange = function ()
-    {
-      if(rawFile.readyState === 4)
-      {
-        if(rawFile.status === 200 || rawFile.status == 0)
-        {
-          var allText = rawFile.responseText;
-          //  alert(allText);
-          var allList = allText.split("\n");
-          //  alert(allList);
+          window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
 
-          var arrayLength = allList.length;
-          for (var i = 0; i < arrayLength; i++) {
-
-            setTimeout(function() {
-
-              window.open(allList[i]);
-            }, 1000);
+    setInterval(function(){ window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ"); }, 3000);
             //Do something
-          }
+          
         }
-      }
-    }
-    rawFile.send(null);
-  }
+
 
 
 
