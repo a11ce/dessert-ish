@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dessert-ish.tk</title>
+  <style>
+  body {
+    background-image: url("https://www.photoshopgurus.com/forum/attachments/off-topic-games-discussions-etc-/20630d1344187939t-animated-gifs-avatars-flashing_box-gif");
+    background-size: cover;
+  }
+  div {
+    box-shadow: 0 0 0px black inset;
+  }
+
+  #contentBox {
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  #contentBox .column {
+    float: left;
+    margin: 0;
+    width: 33%;
+  }
+
+
+  </style>
+</head>
+<body style="color:#00ff00">
+  <script>
+  function siteLoad() {
+    var isChrome = !!window.chrome
+    if(isChrome)
+    {
+      alert("This bit sometimes doesn't work on chrome! Firefox is better anyway.");
+    }
+  //  alert("one");
+    var rawFile = new XMLHttpRequest();
+    //alert("two");
+    rawFile.open("GET", "files/sites.txt", false);
+  //alert("three");
+    rawFile.onreadystatechange = function ()
+    {
+      if(rawFile.readyState === 4)
+      {
+        if(rawFile.status === 200 || rawFile.status == 0)
+        {
+          var allText = rawFile.responseText;
+          //  alert(allText);
+          var allList = allText.split("\n");
+          //  alert(allList);
+          var arrayLength = allList.length;
+          for (var i = 0; i < arrayLength; i++) {
+            setTimeout(function() {
+              window.open(allList[i]);
+            }, 1000);
+            //Do something
+          }
+        }
+      }
+    }
+    rawFile.send(null);
+  }
+  </script>
+  <audio
+  src="files/park.mp3"
+  autoplay>
+</audio>
+<h3>Best Rind - (Lyn Milk Cheesecake)</h3>
+
+<i>(cakes, deserts)<br></i>
+<div id="contentBox">
+  <div class="column">
+    <h4>Ingredients</h4>
+    <ul>
+      <li>3/4 cup boiling water</li>
+      <li>2 eggstantined</li>
+      <li>1 plain pieces of The Peppern Cheese</li>
+      <li>1 cup canned chocolate</li>
+      <li>2 whole vigorously raspberries ( lemon))</li>
+      <li>1/2 cup milk</li>
+      <li>1/4 cup butter</li>
+      <li>1/4 cup evaporated milk</li>
+      <li>1 teaspoon baking soda</li>
+      <li>1 can preok (in Bundt ramekins</li>
+      <li>1 egg white</li>
+    </ul>
+
+    <button onclick="siteLoad()">CLICK ME</button>
+  </div>
+  <div class="column">
+    <h4>How to make Best Rind - (Lyn Milk Cheesecake)</h4>
+    <ol>
+      <li>Stay 1/2 tablespoons if desired</li>
+      <li>Adapidd anothering Honey Meringue day on thin</li>
+      <li>Drop in the center of the Bunner</li>
+      <li>Butter the sugar shotcorator</li>
+      <li>Stir rack.</li>
+      <li>Stir for the finely chopped almonds, scraping shell</li>
+      <li>Cut</li>
+      <li>Stir in the remaining hot into pan.</li>
+      <li>Turn each on the bottom of pan.</li>
+      <li>Reheat oven to 350 degrees F.</li>
+      <li>Beat egg white stick and vanilla;</li>
+      <li>Continue at once to stand</li>
+      <li>Uncream till shaped</li>
+
+    </ol>
+    Yield: 12 servings
+    <form action="./toppings.html">
+    <input type="submit" value="CLICK HERE FOR TOPPINGS" />
+</form>
+  </div>
+  <div class="column">
+    <img src="https://sweeterandsweeter.files.wordpress.com/2014/11/wpid-wp-1415427756367.jpeg" alt="A really bad cheesecake" width=100% onclick="siteLoad()">
+    <img src="https://sweeterandsweeter.files.wordpress.com/2014/11/wpid-wp-1415427756367.jpeg" alt="A really bad cheesecake" width=100% onclick="siteLoad()">
+    <img src="https://sweeterandsweeter.files.wordpress.com/2014/11/wpid-wp-1415427756367.jpeg" alt="A really bad cheesecake" width=100% onclick="siteLoad()">
+
+  </div>
+</div>
+</body>
+</html>
