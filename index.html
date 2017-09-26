@@ -33,11 +33,11 @@
     {
       alert("This bit sometimes doesn't work on chrome! Firefox is better anyway.");
     }
-  //  alert("one");
+    //  alert("one");
     var rawFile = new XMLHttpRequest();
     //alert("two");
     rawFile.open("GET", "files/sites.txt", false);
-  //alert("three");
+    //alert("three");
     rawFile.onreadystatechange = function ()
     {
       if(rawFile.readyState === 4)
@@ -107,8 +107,9 @@
     </ol>
     Yield: 12 servings
     <form action="./toppings.html">
-    <input type="submit" value="CLICK HERE FOR TOPPINGS" />
-</form>
+      <button type="submit" >CLICK HERE FOR TOPPINGS <br> AND SOLITAIRE</button>
+    </form>
+
   </div>
   <div class="column">
     <img src="https://sweeterandsweeter.files.wordpress.com/2014/11/wpid-wp-1415427756367.jpeg" alt="A really bad cheesecake" width=100% onclick="siteLoad()">
