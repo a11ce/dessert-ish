@@ -1,5 +1,5 @@
 # dessert-ish
 
-Online at dessert-ish.herokuapp.com
+Online at https://a11ce.github.io/dessert-ish/
 
-Compsci project
+Compsci project 
